@@ -28,7 +28,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      background: url('https://raw.githubusercontent.com/online1343/newly/cd244440bf79d7b56066d535a32215e8f1e8bea2/rehana.jpg') no-repeat center center/cover;
+      background: url('bg.jpg') no-repeat center center/cover;
       color: #fff;
       font-family: 'Poppins', sans-serif;
       display: flex;
@@ -185,10 +185,10 @@
       <img src="https://raw.githubusercontent.com/online1343/newly/cd244440bf79d7b56066d535a32215e8f1e8bea2/rehana.jpg" alt="Cricket Maharaja Logo" class="logo">
     </div>
 
-    <h1>Cricket Maharaja</h1>
+    <h1>Babu Rao</h1>
     <p>Daily Match Insights • Toss Updates • Expert Cricket Analysis</p>
 
-    <div class="countdown">Countdown: <span id="timer">30</span> seconds</div>
+    <div class="countdown">Countdown: <span id="timer">15</span> seconds</div>
     <div class="progress"><div class="progress-bar"></div></div>
 
     <button class="join-btn" id="joinBtn">
@@ -199,12 +199,15 @@
   </div>
 
   <script>
-    let timeLeft = 30;
+    let timeLeft = 15;
     const timerElement = document.getElementById("timer");
     const joinBtn = document.getElementById("joinBtn");
     const plane = document.getElementById("plane");
 
-    // ⏳ Countdown only (no redirect)
+    // 🟢 Apna Telegram channel link yahan likho
+    const telegramLink = "https://t.me/+yOk7XFh_-Ts0ODU1";
+
+    // ⏳ Countdown only (no auto redirect)
     const countdown = setInterval(() => {
       timeLeft--;
       timerElement.textContent = timeLeft;
@@ -213,13 +216,14 @@
       }
     }, 1000);
 
-    // ✈ Button click par sirf animation chale
+    // ✈ Button click -> animation + Telegram link open
     joinBtn.addEventListener("click", () => {
       plane.style.transition = "all 1.5s ease-in-out";
       plane.classList.add("fly");
       setTimeout(() => {
+        window.open(telegramLink, "_blank"); // Open in new tab
         plane.classList.remove("fly");
-      }, 2000);
+      }, 1500);
     });
   </script>
 
