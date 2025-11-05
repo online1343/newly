@@ -195,41 +195,31 @@ src="https://www.facebook.com/tr?id=4217515898490557&ev=PageView&noscript=1"
   <div class="overlay"></div>
 
   <div class="content">
-  <div class="logo-container">
-    <img src="https://raw.githubusercontent.com/online1343/newly/cd244440bf79d7b56066d535a32215e8f1e8bea2/rehana.jpg" alt="Profile Image" class="mx-auto w-24 h-24 rounded-full mt-3 border-4 border-blue-800 shadow-lg">
+    <div class="logo-container">
+      <img src="logo.png" alt="Cricket Maharaja Logo" class="logo">
+    </div>
 
+    <h1>Cricket Maharaja</h1>
+    <p>Daily Match Insights • Toss Updates • Expert Cricket Analysis</p>
+
+    <div class="countdown">Redirecting in <span id="timer">15</span> seconds...</div>
+    <div class="progress"><div class="progress-bar"></div></div>
+
+    <button class="join-btn" id="joinBtn">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" width="28" alt="Telegram">
+      Join Now
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" class="airplane" id="plane">
+    </button>
   </div>
 
-  <h1>Babu Rao</h1>
-  <p>Daily Match Insights • Toss Updates • Expert Cricket Analysis</p>
-
-  <div class="countdown">
-    <h2>Countdown: <span id="time">15</span> seconds</h2>
-  </div>
-
-  <button class="join-btn" id="joinBtn">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" width="28" alt="Telegram Logo">
-    Join Now
-    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" class="airplane" id="plane" width="20" alt="plane">
-  </button>
-</div>
-
-<script>
-  let timeLeft = 15;
-  const timerElement = document.getElementById("time");
-
-  const countdown = setInterval(() => {
-    timeLeft--;
-    timerElement.textContent = timeLeft;
-
-    if (timeLeft <= 0) {
-      clearInterval(countdown);
-    }
-  }, 1000);
-</script>
+  <script>
+    let timeLeft = 15;
+    const timerElement = document.getElementById("timer");
+    const joinBtn = document.getElementById("joinBtn");
+    const plane = document.getElementById("plane");
 
     // 🔗 Apna Telegram channel link yahan lagaye
-    const telegramLink = "https://t.me/+GZYJY_mPDrJiOTVl"; 
+    const telegramLink = "https://t.me/+0GTpuNzuX-kxNTVl"; 
 
     // Countdown
     const countdown = setInterval(() => {
